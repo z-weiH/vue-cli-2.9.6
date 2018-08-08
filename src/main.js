@@ -14,6 +14,9 @@ if(process.env.NODE_ENV === 'development') {
   require('element-ui/lib/theme-chalk/index.css');
 }
 
+// 样式
+import '@/assets/css/index.scss'
+
 // axios
 import axios from 'axios'
 import './axios'

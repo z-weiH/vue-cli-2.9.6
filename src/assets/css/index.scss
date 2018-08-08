@@ -1,0 +1,24 @@
+// 重置 element 样式
+@import './elementReset.scss';
+
+// 通用样式
+@import './common.scss';
+
+// 字体样式
+@import '../font/iconfont/iconfont.css';
+
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  height: 100%;
+}
+body{
+  margin: 0;
+  height: 100%;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  #app{
+    height: 100%;
+  }
+}

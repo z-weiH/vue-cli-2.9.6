@@ -10,6 +10,10 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
+div{
+  border: 2px solid red;
+}
 
 </style>
