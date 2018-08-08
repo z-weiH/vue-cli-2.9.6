@@ -6,10 +6,32 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+
+if(process.env.NODE_ENV === 'development') {
+  // element-ui
+  let ElementUI = require('element-ui');
+  Vue.use(ElementUI);
+  require('element-ui/lib/theme-chalk/index.css');
+}
+
+// axios
+import axios from 'axios'
+import './axios'
+Vue.prototype.$http = axios;
+
+// 引入 store
+import store from './store'
+
+// cookie
+import cookie from 'js-cookie'
+Vue.prototype.$cookie = cookie;
+
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

@@ -14,6 +14,13 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const env = require('../config/prod.env')
 
 const webpackConfig = merge(baseWebpackConfig, {
+  externals : {
+    'vue': 'Vue',    
+    'element-ui': 'ELEMENT',
+    'vue-router': 'VueRouter',
+    'vuex': 'Vuex',
+    'axios': 'axios',
+  },
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.build.productionSourceMap,
@@ -35,7 +42,9 @@ const webpackConfig = merge(baseWebpackConfig, {
     new UglifyJsPlugin({
       uglifyOptions: {
         compress: {
-          warnings: false
+          warnings: false,
+          drop_debugger: true,
+          drop_console: true,
         }
       },
       sourceMap: config.build.productionSourceMap,
@@ -62,7 +71,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: config.build.index,
-      template: 'index.html',
+      template: 'index.prod.html',
       inject: true,
       minify: {
         removeComments: true,
