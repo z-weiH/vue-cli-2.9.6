@@ -1,6 +1,7 @@
 <template>
   <div>
     啦啦啦 - demo
+    <i class="iconfont icon-language"></i>
   </div>
 </template>
 

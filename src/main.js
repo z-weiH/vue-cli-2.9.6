@@ -25,6 +25,10 @@ Vue.prototype.$http = axios;
 // 引入 store
 import store from './store'
 
+// 引入 config
+import config from './config'
+Vue.prototype.$config = config;
+
 // cookie
 import cookie from 'js-cookie'
 Vue.prototype.$cookie = cookie;
