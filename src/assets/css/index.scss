@@ -7,10 +7,10 @@
 // 字体样式
 @import '../font/iconfont/iconfont.css';
 
-*{
-  margin: 0;
-  padding: 0;
-}
+// css reset
+@import './reset.scss';
+
+
 html{
   height: 100%;
 }
