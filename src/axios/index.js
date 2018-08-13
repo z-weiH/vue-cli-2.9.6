@@ -2,6 +2,7 @@ import axios from 'axios'
 import qs from 'qs' //formdata序列化
 import { Message } from 'element-ui';
 import $router from '@/router'
+import config from '@/config'
 
 
 
@@ -9,6 +10,8 @@ import $router from '@/router'
 axios.defaults.timeout = 10000;
 // post 默认请求方式 (貌似有 axios bug 设置并没有效果)
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+// 请求地址 前缀
+axios.defaults.baseURL = config.host;
 
 
 // 请求拦截
