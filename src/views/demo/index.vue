@@ -2,6 +2,8 @@
   <div>
     啦啦啦 - demo
     <i class="iconfont icon-language"></i>
+
+    <span v-ellipsis="100">很长长长长长长长长长长</span>
   </div>
 </template>
 

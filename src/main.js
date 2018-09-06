@@ -17,6 +17,9 @@ if(process.env.NODE_ENV === 'development') {
 // 样式
 import '@/assets/css/index.scss'
 
+// 指令
+import './directive'
+
 // axios
 import axios from 'axios'
 import './axios'
