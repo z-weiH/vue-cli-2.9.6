@@ -16,7 +16,7 @@ axios.defaults.baseURL = config.host;
 
 // 请求拦截
 axios.interceptors.request.use((rqs) => {
-  // post 默认 formData格式 提交
+  // 默认以 form表单提交 ， 增加 mheaders = true 表示以 json格式提交 ， 使用 let form = new FormData() 格式则以 FormData 格式提交
   if (rqs.method === 'post' && rqs.mheaders !== true) {
     rqs.data = qs.stringify(rqs.data);
   }
